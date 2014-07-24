@@ -1,0 +1,489 @@
+// Schriften
+@font-face {
+   font-family: 'OpenSans-Regular';
+   src: url(../font/Open_Sans/OpenSans-Regular.ttf) format('truetype');
+}
+@font-face {
+   font-family: 'OpenSans-Italic';
+   src: url(../font/Open_Sans/OpenSans-Italic.ttf) format('truetype');
+}
+@font-face {
+   font-family: 'OpenSans-Light';
+   src: url(../font/Open_Sans/OpenSans-Light.ttf) format('truetype');
+}
+@font-face {
+   font-family: 'OpenSans-LightItalic';
+   src: url(../font/Open_Sans/OpenSans-LightItalic.ttf) format('truetype');
+}
+
+@font-sans-serif: "OpenSans-Regular";
+@font-sans-serif-italic: "OpenSans-Italic";
+@font-sans-serif-light: "OpenSans-Light";
+@font-sans-serif-lightitalic: "OpenSans-Lightitalic";
+
+
+@import "mixins.less";
+
+@color: #b4d4ee; // Main color
+@color30: darken(@color, 30%);
+@color-10: lighten(@color, 10%);
+
+
+/*
+ * Hinweise: 
+ * - Benutze "em"
+ * - Benutze flex
+ */
+
+*, *:after, *:before {
+	.box-sizing(border-box);
+	margin: 0;
+	padding: 0;
+	.user-select(none);
+}
+html, body { height: 100%; overflow: hidden; }
+body {
+	font-family: @font-sans-serif;
+	font-size: 1em;
+	.flexGrid;
+	.flexDirectionColumn;
+}
+
+a, input, select {
+	outline: none;
+}
+
+.hidden {display:none;}
+
+
+
+#head {
+	.flexNone;
+	height: 4em;
+	background-color: @color30;
+	color: #fff;
+	padding: 0 20px;
+
+	& > div {
+		.flexGrid;
+		.flexDirectionRow;
+
+		& > div {justify-content: center;align-items: center;
+			.flexAuto;.flex(1 1 auto);
+			height: 60px;
+			line-height: 60px;
+			font-size: 20px;
+			.justifyContent(space-between);
+			max-width:33%;
+
+			&.left {
+				
+			}
+			&.title {
+				text-align: center;
+			}
+			&.right {
+				text-align: right;
+			}
+		}
+	}
+}
+
+#main {
+	.flexAuto;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+
+	.flexGrid;
+	.flexDirectionColumn;
+	.justifyContent(center);
+
+
+	.nojsmsg {
+		color: #ccc;color: lighten(@color, 10%);
+
+		.flexNone;
+
+
+		/*
+		.justifyContent(center);
+		-webkit-box-orient: vertical;
+		-webkit-box-pack: center;
+		-webkit-box-align: center;
+
+		-webkit-box-align: center;
+		align-items: center;
+		align-content: center;*/
+		align-self: center;
+
+	}
+}
+
+#menu {
+	.flexNone;
+	height: 4em;
+	background-color: @color30;
+	text-align: center;
+	color: #fff;
+
+	ul {
+		.flexGrid;
+		.flexDirectionRow;
+		.justifyContent(center);
+		height: 4em;
+
+		&,
+		& > li {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			line-height: 1em;
+		}
+
+		& > li {
+			.flexNone;
+
+			a {
+				display: block;
+				text-decoration: none;
+				width: 5.5em;
+				height: 4em;
+
+				&.active {
+					background-color: darken(@color, 20%);
+					.transition(background-color 0.15s linear);
+				}
+			}
+
+			.icon {
+				display: block;
+				margin: 0 auto;
+				width: 2.5em;
+				height: 2.5em;
+
+			}
+			.label {
+				height: 1em;
+				font-size: 0.8em;
+			}
+
+
+
+			.icon {
+				-webkit-mask-repeat: no-repeat;
+				-webkit-mask-size: contain;
+				-webkit-mask-position: center center;
+				background-color: darken(@color, 50%);
+				background-size: contain;
+			}
+			a, .label {
+				color: darken(@color, 50%);
+			}
+			.active {
+				.icon {
+					display: block;
+					content: '';
+					width: 2.5em;
+					height: 2.5em;
+					background-color: #fff;
+				}
+				&, .label {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+#menu {
+	li.u .icon {
+		-webkit-mask-image: url(../img/settings9.svg);
+	}
+	li.l .icon {
+		-webkit-mask-image: url(../img/list23.svg);
+	}
+	li.t .icon {
+		-webkit-mask-image: url(../img/table18.svg);
+	}
+}
+
+
+
+#curriculumOverview {
+	.justifyContent(center);
+	color: @color30;
+
+	.select-wrap {
+		text-align: center;
+
+		select {
+			-webkit-appearance: none;
+			display: inline-block;
+			margin: 10px;
+			padding: 15px 30px;
+			background-color: @color30;
+			color: #fff;
+			font-size: 16px;
+			border-radius: 0;
+		}
+
+		select {
+
+		}
+
+		a {
+			display: inline-block;
+			margin: 10px;
+			padding: 5px 20px;
+			background-color: #efefef;
+			text-decoration: none;
+			color: @color30;
+			font-size: 12px;
+		}
+	}
+}
+
+#curriculumList {
+	.flexGrid;
+	.flexDirectionColumn;
+	border-top: 1px solid @color;
+	border-bottom: 1px solid @color;
+	list-style-type: none;
+	color: @color30;
+
+	& > li {
+		.flexNone;
+		height: 45px;
+		line-height: 45px;
+
+		&:nth-child(n+2) {
+			border-top: 1px solid @color-10;
+		}
+
+		& > div {
+			.flexGrid;
+			.flexDirectionRow;
+			padding: 0 20px;
+
+			.kuerzel {
+				.flexNone;
+				width: 40px;
+			}
+			.name {
+				.flexAuto;
+				overflow: hidden;
+				white-space: nowrap;
+				-o-text-overflow: ellipsis;
+				text-overflow: ellipsis;
+			}
+			.note {
+				.flexNone;
+				width: 40px;
+				text-align:center;
+			}
+		}
+
+		&.bestanden {
+			background-color: lightgreen;
+			color: #333;
+		}
+	}
+}
+
+
+#curriculumTable {
+	text-align: center;
+	color: @color30;
+	margin:-1px 0 0 0;
+
+	&.semesters {
+		.flexAuto;
+
+		.flexGrid;
+		.flexDirectionColumn;
+	}
+	.module {
+		.flexAuto;
+
+		.flexGrid;
+		.flexDirectionRow;
+		padding: 1px 0 0 0;
+		margin: 0 0 0 -1px;
+	}
+
+	.module > div {width:16.6666%;
+		.flexAuto;
+
+		.flexGrid;
+		.flexDirectionColumn;
+
+		padding: 0 0 0 1px;
+	}
+
+	.modul {position:relative;
+		.flexAuto;
+
+		.flexGrid;
+		.flexDirectionRow;
+
+		//-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;
+		//-webkit-box-align:center;-ms-flex-align:center;align-items:center;
+	}
+	
+	.bestanden .front {
+		background-color: lightgreen;
+		color: #333;
+	}
+
+	div.span-1 {.flex(1 1 auto);width:16.66666%;}
+	div.span-2 {.flex(2 1 auto);width:33.33333%;}
+	div.span-3 {.flex(3 1 auto);width:49.99999%;}
+}
+
+
+
+
+
+/*
+html, body {
+    height:100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    position:relative;
+}
+*/
+
+/*
+.scrollable {
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.scrollable * {
+    -webkit-transform: translate3d(0,0,0);
+}
+*/
+
+/* disable callout, image save panel on long press */
+/*-webkit-touch-callout: none;
+*/
+ /* "turn off" link highlight, good for custom pressed states */  
+/*-webkit-tap-highlight-color: transparent;
+*/
+
+
+
+.x-fullscreen{position:absolute !important}
+.x-body{position:relative;z-index:0}
+.x-inner,.x-body{width:100%;height:100%}
+.x-sized{position:relative}
+.x-innerhtml{width:100%}
+.x-layout-box{display:flex;display:-webkit-box;display:-ms-flexbox}
+.x-layout-box.x-horizontal{-webkit-box-orient:horizontal !important;-ms-flex-direction:row !important;flex-direction:row !important}
+.x-layout-box.x-horizontal>.x-layout-box-item.x-flexed{min-width:0 !important}
+.x-layout-box.x-vertical{-webkit-box-orient:vertical !important;-ms-flex-direction:column !important;flex-direction:column !important}
+.x-layout-box.x-vertical>.x-layout-box-item.x-flexed{min-height:0 !important}
+.x-layout-box>.x-layout-box-item{display:flex !important;display:-webkit-box !important;display:-ms-flexbox !important}
+.x-layout-box.x-align-start{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}
+.x-layout-box.x-align-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.x-layout-box.x-align-end{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}
+.x-layout-box.x-align-stretch{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}
+.x-layout-box.x-pack-start{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
+.x-layout-box.x-pack-center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.x-layout-box.x-pack-end{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+.x-layout-box.x-pack-justify{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+
+
+
+/* entire container, keeps perspective */
+
+.fw {
+		.flexAuto;
+
+		.flexGrid;
+		.flexDirectionRow;
+}
+
+.flip-container {
+	-webkit-perspective: 1000;
+	perspective: 1000;
+
+		.flexAuto;
+
+		.flexGrid;
+		.flexDirectionColumn;
+}
+/* flip the pane when hovered */
+//.flip-container:hover .flipper, 
+.flip-container.hover .flipper {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	//width: 100%;
+	//height: 100%;
+
+}
+
+/* flip speed goes here */
+.flipper {
+	width: 100%;
+	height: 100%;
+		.flexAuto;
+
+		.flexGrid;
+		.flexDirectionRow;
+
+	.transition(0.6s);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.fff {width:100%;height:100%;
+		.flexAuto;
+
+		.flexGrid;
+		.flexDirectionRow;
+}
+.fff2 {width:100%;height:100%;
+		.flexAuto;
+
+		.flexGrid;
+		.flexDirectionColumn;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	width:100%;height:100%;
+		.flexAuto;
+
+		.flexGrid;
+		.flexDirectionRow;
+
+		-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;
+		-webkit-box-align:center;-ms-flex-align:center;align-items:center;
+		text-align:center;
+
+	position: absolute;
+	top: 0;bottom:0;
+	left: 0;right:0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	background-color:#efefef;
+}
+
+

@@ -1,0 +1,239 @@
+{
+	"version": "1",
+	"hochschule": "HS Emden / Leer",
+	"studiengang": "Medieninformatik",
+	"studienordnung": "2013",
+	"module": [  
+		{
+			"id": "2021",
+			"semester": 1,
+			"curriculumOrder": 1,
+			"kuerzel": "GP1",
+			"name": "Grundlagen der Programmierung 1"
+		},
+		{
+			"id": "2011",
+			"semester": 1,
+			"curriculumOrder": 2,
+			"kuerzel": "EI",
+			"name": "Einführung in die Informatik"
+		},
+		{
+			"id": "2041",
+			"semester": 1,
+			"curriculumOrder": 3,
+			"kuerzel": "LA",
+			"name": "Lineare Algebra"
+		},
+		{
+			"id": "2051",
+			"semester": 1,
+			"curriculumOrder": 4,
+			"kuerzel": "MD1",
+			"name": "Mediendesign 1"
+		},
+		{
+			"id": "2031",
+			"semester": 1,
+			"curriculumOrder": 5,
+			"kuerzel": "KFS",
+			"name": "Kommunikation, Führung & Selbstmanagement"
+		},
+		{
+			"id": "2061",
+			"semester": 1,
+			"curriculumOrder": 6,
+			"kuerzel": "CABS",
+			"name": "Computerarchitektur und Betriebssysteme"
+		},
+
+		{
+			"id": "2121",
+			"semester": 2,
+			"curriculumOrder": 1,
+			"kuerzel": "GP2",
+			"name": "Grundlagen der Programmierung 2"
+		},
+		{
+			"id": "2111",
+			"semester": 2,
+			"curriculumOrder": 2,
+			"kuerzel": "TI",
+			"name": "Theoretische Informatik"
+		},
+		{
+			"id": "2071",
+			"semester": 2,
+			"curriculumOrder": 3,
+			"kuerzel": "RF",
+			"name": "Relationen und Funktionen"
+		},
+		{
+			"id": "2091",
+			"semester": 2,
+			"curriculumOrder": 4,
+			"kuerzel": "MD2",
+			"name": "Mediendesign 2"
+		},
+		{
+			"id": "2081",
+			"semester": 2,
+			"curriculumOrder": 5,
+			"kuerzel": "MCK",
+			"name": "Mensch-Computer-Kommunikation"
+		},
+		{
+			"id": "2101",
+			"semester": 2,
+			"curriculumOrder": 6,
+			"kuerzel": "KN1",
+			"name": "Kommunikationsnetze 1"
+		},
+
+		{
+			"id": "2141",
+			"semester": 3,
+			"curriculumOrder": 1,
+			"kuerzel": "ADS",
+			"name": "Algorithmen und Datenstrukturen"
+		},
+		{
+			"id": "2161",
+			"semester": 3,
+			"curriculumOrder": 2,
+			"kuerzel": "DB",
+			"name": "Datenbanken"
+		},
+		{
+			"id": "2131",
+			"semester": 3,
+			"curriculumOrder": 3,
+			"kuerzel": "CG",
+			"name": "Computergrafik"
+		},
+		{
+			"id": "2181",
+			"semester": 3,
+			"curriculumOrder": 4,
+			"kuerzel": "MMT",
+			"name": "Multimediatechnik"
+		},
+		{
+			"id": "2151",
+			"semester": 3,
+			"curriculumOrder": 5,
+			"kuerzel": "WEB",
+			"name": "Web-Programmierung"
+		},
+		{
+			"id": "2171",
+			"semester": 3,
+			"curriculumOrder": 6,
+			"kuerzel": "ITR",
+			"name": "IT-Recht"
+		},
+
+		{
+			"id": "2231",
+			"semester": 4,
+			"curriculumOrder": 1,
+			"kuerzel": "SWT",
+			"name": "Softwaretechnik"
+		},
+		{
+			"id": "2241",
+			"semester": 4,
+			"curriculumOrder": 2,
+			"kuerzel": "ISP",
+			"name": "Internetserver-Programmierung"
+		},
+		{
+			"id": "2211",
+			"semester": 4,
+			"curriculumOrder": 3,
+			"kuerzel": "IMG",
+			"name": "Internetanwendungen für mobile Geräte"
+		},
+		{
+			"id": "2221",
+			"semester": 4,
+			"curriculumOrder": 4,
+			"kuerzel": "GIS",
+			"name": "Grundlagen der IT-Sicherheit"
+		},
+		{
+			"id": "2191",
+			"semester": 4,
+			"curriculumOrder": 5,
+			"kuerzel": "BWL",
+			"name": "Betriebswirtschaftslehre"
+		},
+		{
+			"id": "2201",
+			"semester": 4,
+			"curriculumOrder": 6,
+			"kuerzel": "EWP",
+			"name": "Einführung in die wiss. Projektarbeit"
+		},
+
+		{
+			"id": "2251",
+			"semester": 5,
+			"curriculumOrder": 1,
+			"kuerzel": "PFW",
+			"name": "Pattern and Frameworks"
+		},
+		{
+			"id": "wpf1",
+			"semester": 5,
+			"curriculumOrder": 2,
+			"kuerzel": "WPF1",
+			"name": "Wahlpflicht 1"
+		},
+		{
+			"id": "wpf3",
+			"semester": 5,
+			"curriculumOrder": 3,
+			"kuerzel": "WPF3",
+			"name": "Wahlpflicht 3"
+		},
+		{
+			"id": "3011",
+			"semester": 5,
+			"curriculumOrder": 4,
+			"curriculumSpan": 3,
+			"kuerzel": "P",
+			"name": "Praxisprojekt"
+		},
+
+		{
+			"id": "2261",
+			"semester": 6,
+			"curriculumOrder": 1,
+			"kuerzel": "INM",
+			"name": "Informationsmanagement"
+		},
+		{
+			"id": "wpf2",
+			"semester": 6,
+			"curriculumOrder": 2,
+			"kuerzel": "WPF2",
+			"name": "Wahlpflicht 2"
+		},
+		{
+			"id": "wpf4",
+			"semester": 6,
+			"curriculumOrder": 3,
+			"kuerzel": "WPF4",
+			"name": "Wahlpflicht 4"
+		},
+		{
+			"id": "b",
+			"semester": 6,
+			"curriculumOrder": 4,
+			"curriculumSpan": 3,
+			"kuerzel": "B",
+			"name": "Bachelorarbeit"
+		}
+	]
+}

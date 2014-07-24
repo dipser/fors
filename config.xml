@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="de.vegvisir.arbeit" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Curriculum Vegvisir</name>
+    <description>
+        Curriculum Wgweiser für das Studium.
+    </description>
+    <author email="aurel@vegvisir.de" href="http://www.vegvisir.de">
+        Vegvisir
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

@@ -1,0 +1,66 @@
+/* 
+ * flex
+ *
+ * History
+ * 08.03.2014 - Aurel Hermand (Vegvisir) - Initial version
+ */
+
+.displayFlex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex(@values) {
+  -webkit-box-flex: @values;
+  -moz-box-flex: @values;
+  -webkit-flex: @values;
+  -ms-flex: @values;
+  flex: @values;
+}
+.flexNone {
+  .flex(0 0 auto);
+}
+.flexAuto {
+  .flex(1 1 auto);
+}
+.flexInitial {
+  .flex(0 1 auto);
+}
+
+.flexDirection(@value) {
+  -webkit-flex-direction: @value;
+  flex-direction: @value;
+}
+.flexDirectionRow {
+  .flexDirection(row);
+}
+.flexDirectionColumn {
+  .flexDirection(column);
+}
+
+.alignItems(@value) {
+  -webkit-align-items: @value;
+  align-items: @value;
+}
+.alignContent(@value) {
+  -webkit-align-content: @value;
+  align-content: @value;
+}
+.justifyContent(@value) {
+  -webkit-justify-content: @value;
+  justify-content: @value;
+}
+
+
+
+
+.flexGrid {
+  .displayFlex;
+  //.flexDirectionRow; // Horizontal
+}
+.flexItem {
+  .flexAuto;
+}

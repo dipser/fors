@@ -1,0 +1,21 @@
+CACHE MANIFEST
+
+# Explicitly cached 'master entries'.
+CACHE:
+/index.html
+/cordova.ios.js
+/cordova_plugins.js
+#/res/lib/
+/res/css/main.css
+/res/js/main.js
+#/res/font/
+#/res/img/logo.png
+
+
+# Resources that require the user to be online.
+NETWORK:
+*
+
+# Serving files if inaccessible.
+FALLBACK:
+/ /offline.php
